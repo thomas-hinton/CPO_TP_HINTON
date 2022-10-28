@@ -1,3 +1,5 @@
+package com.mycompany.tp2_bieres_hinton;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -9,11 +11,11 @@
  */
 public class BouteilleBiere {
     String nom = "";
-    float degreAlcool = 0;
+    double degreAlcool = 0;
     String brasserie = "";
-    boolean ouverte = false;
-
+    boolean ouverte = false; 
+    
 public void lireEtiquette() {
-System.out.println("Bouteille de " + nom +" (" + degreAlcool +
- " degres) \nBrasserie : " + brasserie ) ;
-}}
+    System.out.println("Bouteille de " + nom +" (" + degreAlcool + " degres) \nBrasserie : " + brasserie ) ;
+}
+}
