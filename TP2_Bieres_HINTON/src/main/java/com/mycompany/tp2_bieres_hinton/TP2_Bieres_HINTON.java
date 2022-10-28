@@ -18,5 +18,12 @@ public class TP2_Bieres_HINTON {
         //Création de l'objet "autreBiere":
         BouteilleBiere autreBiere = new BouteilleBiere("Leffe", 6.6 ,"Abbaye de Leffe") ;
         autreBiere.lireEtiquette();                //Affichage de l'objet
+        //Création de 3 autres bierres :
+        BouteilleBiere autreBiere1 = new BouteilleBiere("Heineken", 5, "Heineken Holding");
+        autreBiere1.lireEtiquette();               //Affichage de l'objet
+        BouteilleBiere autreBiere2 = new BouteilleBiere("Carlsberg", 5, "Vesterbro à Copenhague");
+        autreBiere2.lireEtiquette();               //Affichage de l'objet
+        BouteilleBiere autreBiere3 = new BouteilleBiere( "Guinness", 4.2, "St. James's Gate");
+        autreBiere3.lireEtiquette();               //Affichage de l'objet
     }
 }
