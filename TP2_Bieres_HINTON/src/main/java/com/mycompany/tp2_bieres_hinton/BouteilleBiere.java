@@ -36,6 +36,21 @@ public class BouteilleBiere {       //Définition de notre classe
         }
     }
 
+    /**
+     *Méthode "to "string:
+     * retourne la chaine de caractère que l’on veut afficher quand l’objet est cité.
+     * @return le nom, le degrès d'alcool et si la bouteille est ouverte
+     */
+    @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = nom + " (" + degreAlcool + " degrés)Ouverte ? "; 
+        if (ouverte == true ) chaine_a_retourner += "oui" ;
+        else chaine_a_retourner += "non" ;
+        return chaine_a_retourner ;
+}
+
+
 
     /**
      *Constructeur permettat de créer un objet de classe BouteilleBiere

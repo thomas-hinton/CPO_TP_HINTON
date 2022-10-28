@@ -11,6 +11,12 @@ package com.mycompany.tp2_bieres_hinton;
  */
 public class TP2_Bieres_HINTON {
 
+    /**
+     *Méthode principale:
+     * -déroulement du code
+     * appel et utilisation de d'autres méthodes
+     * @param args
+     */
     public static void main(String[] args) {
         //Création de l'objet "uneBiere":
         BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", 7.0 ,"Dubuisson") ;
@@ -25,5 +31,16 @@ public class TP2_Bieres_HINTON {
         autreBiere2.lireEtiquette();               //Affichage de l'objet
         BouteilleBiere autreBiere3 = new BouteilleBiere( "Guinness", 4.2, "St. James's Gate");
         autreBiere3.lireEtiquette();               //Affichage de l'objet
+        
+        //Affichage d'une bierre. ouverte? Teste affichage, modification, teste affichage
+        System.out.println(uneBiere) ;
+        uneBiere.Décapsuler();
+        System.out.println(uneBiere) ;
+        
+        System.out.println(autreBiere) ;
+        autreBiere.Décapsuler();
+        System.out.println(autreBiere) ;
+        
+        
     }
 }
