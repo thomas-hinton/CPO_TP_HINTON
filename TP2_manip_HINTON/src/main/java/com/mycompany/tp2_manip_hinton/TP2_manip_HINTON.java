@@ -5,6 +5,8 @@
 
 package com.mycompany.tp2_manip_hinton;
 
+import java.util.Arrays;
+
 /**
  *
  * @author 33621
@@ -30,6 +32,11 @@ public class TP2_manip_HINTON {
         //Teste des lignes suivantes :
         //Moussaka assiette666 = assiette1 ;     (L'objet de classe Tartiflette ne peut pas être converti en un objet de class Moussaka)
         //Moussaka assiette667 = new Tartiflette() ; (Le constructeur de class Tartiflette ne peut être utilisé pour créer des objets de class Moussaka)
-        //
+        
+        //Création d'un tableau de 10 références de 10 objets de class Moussaka différents:
+        Moussaka TableauMoussakas [] = new Moussaka[10];        //Déclaration du tableau de type Moussaka et de taille 10
+        for (int i=0 ; i<10 ; i++){                             //Parcour de l'ensemmble du tableau et affectation d'un nouvelle objet de type Moussaka à chaque du tableau
+            TableauMoussakas[i] = new Moussaka(100 +(100*i));   //Les calories choisies vont de 100 à 1000 et son référencés à chaque case du tableau
+        }  
     }
 }
