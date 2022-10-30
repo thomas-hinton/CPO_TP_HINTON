@@ -12,12 +12,42 @@ package com.mycompany.tp2_relation_1_hinton;
 public class TP2_relation_1_HINTON {
 
     public static void main(String[] args) {
+        //Création d'objets de class "Voiture" : uneClio, uneAutreClio, une2008, uneMicra:
         Voiture uneClio = new Voiture ("Clio", "Renault", 5 ) ;
         Voiture uneAutreClio = new Voiture ("Clio", "Renault", 5 ) ;
         Voiture une2008 = new Voiture ("2008", "Peugeot", 6 ) ;
         Voiture uneMicra = new Voiture ("Micra", "Nissan", 4 ) ;
-        Personne bob = new Personne("Bobby", "Sixkiller") ;
-        Personne reno = new Personne("Reno", "Raines") ;
+        
+        //Création d'objets de class "Personne" : 
+        Personne Bob = new Personne("Bobby", "Sixkiller") ;
+        Personne Reno = new Personne("Reno", "Raines") ;
+        //Renvoie à l'utilisateur l'ensemble des voitures disponibles:
         System.out.println("liste des voitures disponibles "+ uneClio + "\n" + uneAutreClio + "\n" + une2008 + "\n" + uneMicra ) ;
+        
+        //relation « Bob est propriétaire d’une Clio »
+        Bob.liste_voitures[0] = uneClio ;
+        Bob.nbVoitures = 1 ;
+        uneClio.Proprietaire = Bob ;
+        //Accès à la voiture de Bob:
+        System.out.println("la premiere voiture de Bob est " + Bob.liste_voitures[0] ) ;
+
+        //Ajout d'une seconde voiture à Bob:
+        Bob.liste_voitures[1] = une2008 ;
+        Bob.nbVoitures = 2 ;
+        une2008.Proprietaire = Bob ;
+        //Accès à la deuxième voiture de Bob:
+        System.out.println("la deuxième voiture de Bob est " + Bob.liste_voitures[1] ) ;
+        
+        //Ajout de deux voitures à Reno:
+        Reno.liste_voitures[0] = uneAutreClio ;
+        uneAutreClio.Proprietaire = Reno ;
+        Reno.liste_voitures[1] = uneMicra ;
+        uneMicra.Proprietaire = Reno ;
+        Reno.nbVoitures = 2 ;
+        //Accès au deux voitures de Bob:
+        System.out.println("la première voiture de Reno est " + Reno.liste_voitures[0] + "\n" + "la deuxième voiture de Reno est " + Reno.liste_voitures[1] ) ;
+        
+        
+        
     }
 }
