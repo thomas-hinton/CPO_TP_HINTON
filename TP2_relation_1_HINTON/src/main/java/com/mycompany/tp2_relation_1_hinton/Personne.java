@@ -28,6 +28,23 @@ public class Personne {
         nbVoitures = 0 ;
         
     }
+    /**
+     * Méthode qui permet d'ajouter une voiture à un propriétaire et d'ajouter un propriétaire à une voiture
+     * @param voiture_a_ajouter La voiture que l'on souhaite ajouter à la personne
+     * @return false ou true, indique si l'opération est reussi ou non
+     */
+    public boolean ajouter_voiture( Voiture voiture_a_ajouter) {
+        if (voiture_a_ajouter.Proprietaire != null || 3 <= nbVoitures ){       //Teste si la voiture n'est pas déja acquise ou volée (Return false si c'est le cas)
+            return false ;                                                     //Teste si le propriétaire à déja trop de voitures
+        }
+        else {
+            liste_voitures[nbVoitures] = voiture_a_ajouter ;                   //Ajout de la voiture à la personne
+            nbVoitures += 1 ;                                                  //Incrémentation du nombre de voitures de la personne
+            voiture_a_ajouter.Proprietaire = this ;                            //Ajout du propriétaire à la voiture
+            return true ;
+        } 
+    }
+    
     
     /**
      * Méthode permettant de renvoyer le contenue d'un objet de la class

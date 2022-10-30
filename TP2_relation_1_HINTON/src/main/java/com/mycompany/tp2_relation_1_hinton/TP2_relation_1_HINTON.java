@@ -48,6 +48,11 @@ public class TP2_relation_1_HINTON {
         System.out.println("la première voiture de Reno est " + Reno.liste_voitures[0] + "\n" + "la deuxième voiture de Reno est " + Reno.liste_voitures[1] ) ;
         
         
-        
+        //teste de la méthode "ajouter_voiture()":
+        Voiture uneAudi = new Voiture ("A1", "Audi", 7 ) ; //Création d'une nouvelle voiture pour le teste
+        Bob.ajouter_voiture(uneAudi) ;                                 //Assignation de la voiture à Bob => True donc reussi => CORRECT
+        Reno.ajouter_voiture(uneAudi) ;                                //Assigantion de la même voiture à Reno =>False donc pas marché => CORRECT
+        System.out.println(Bob.liste_voitures[2]);                                  //Affichage de la troisieme voiture de Bob => CORRECT
+        System.out.println(uneAudi.Proprietaire);                                 //Affichage du propriétaire de la voiture => CORRECT
     }
 }
