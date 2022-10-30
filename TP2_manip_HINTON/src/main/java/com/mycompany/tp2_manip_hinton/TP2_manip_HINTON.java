@@ -23,6 +23,13 @@ public class TP2_manip_HINTON {
         System.out.println("nb de calories de Assiette 2 : " + assiette2.nbCalories) ;
         System.out.println("nb de calories de Assiette 3 : " + assiette3.nbCalories) ;  //On se rend compte que il existe réèlement que deux assietes. Assietes 2 et 3 renvoient vers la même assiete
         
+        //intervertissement des objets de assiette1 et assiette2:
+        assiette2 = assiette1;
+        assiette1 = assiette3;
         
+        //Teste des lignes suivantes :
+        //Moussaka assiette666 = assiette1 ;     (L'objet de classe Tartiflette ne peut pas être converti en un objet de class Moussaka)
+        //Moussaka assiette667 = new Tartiflette() ; (Le constructeur de class Tartiflette ne peut être utilisé pour créer des objets de class Moussaka)
+        //
     }
 }
